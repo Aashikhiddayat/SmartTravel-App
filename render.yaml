@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: smart-trip-api
+    runtime: docker
+    rootDir: backend
+    healthCheckPath: /health
+    envVars:
+      - key: DEMO_MODE
+        value: "true"
+      - key: MOCK_AI
+        value: "true"
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+
